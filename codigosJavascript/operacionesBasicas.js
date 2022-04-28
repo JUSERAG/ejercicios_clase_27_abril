@@ -1,12 +1,10 @@
 'user strict'
 
-function claseOperacion(){
-    operaciones(document.getElementById("operacion").value);
-}
 
-function operaciones(tipoOperacion){
+function operaciones(){
     let numero1=parseInt(document.getElementById("num1").value);
     let numero2=parseInt(document.getElementById("num2").value);
+    let tipoOperacion=document.getElementById("operacion").value;
     let respuesta;
     switch(tipoOperacion){
         case 'sum':
@@ -29,5 +27,5 @@ function operaciones(tipoOperacion){
 
             break;
     }
-    document.getElementById("resultado").innerHTML = respuesta;
+    document.getElementById("resultado").innerHTML = `<label>El resultado es: ${respuesta}</label>`;
 }
